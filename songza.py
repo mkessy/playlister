@@ -4,6 +4,7 @@ import simplejson as json
 import logging
 import os
 import tempfile
+import time
 
 import sys
 
@@ -38,7 +39,8 @@ HEADER = {'User-Agent':
 REQUEST_KWARGS = {'headers':HEADER, 'timeout':10.0, 'allow_redirects':False}
 
 HTTPError = requests.exceptions.HTTPError
-logging.basicConfig(filename='test_log2.log', level=logging.DEBUG)
+date_string = time.strftime("%Y-%m-%d-%H:%M")
+logging.basicConfig(filename=date_string+'.station', level=logging.DEBUG)
 
 
 #BEGIN UTILITY FUNCTIONS
@@ -47,7 +49,7 @@ def expected_tries(N):
     """Calculate the expected number of tries to get
     0.999% coverage of the given playlist"""
 
-    return int(ceil( log(0.001)/log( (float(N)-1)/N ) ))
+    return int(ceil( log(0.01)/log( (float(N)-1)/N ) ))
 
 def get_station_info(stationid):
     """Returns a dictionary with relevant station info"""
@@ -69,8 +71,8 @@ def get_songs(stationid, song_count, song_names):
     next_song_url = BASE_SONG % (stationid,)
 
     songs = []
-    max_tries = 10
-    #max_tries = expected_tries(song_count)
+    #max_tries = 10
+    max_tries = expected_tries(song_count)
     SLEEP_TIME = .25
 
     tries = 0
@@ -136,7 +138,7 @@ def get_songs(stationid, song_count, song_names):
         return ( {'complete':complete, 'remaining':song_count-len(songs),
             'song_names':song_names, 'song_count':song_count, 'stationid':stationid, 'songs':songs}  )
 
-def get_stations(stationids):
+def get_stations(group_name, stationids, dest=None):
     """Gets the playlists specified in the stationids list, and saves them to file"""
 
     print 'Initializing queue with %s stations' % len(stationids)
@@ -181,7 +183,12 @@ def get_stations(stationids):
             playlists[stationid] = json.loads(tf.read())
 
     #merge all playlists (stored in temp files) into a single file
-    with open(stationid+'_station.json', 'w+') as f:
+    if dest:
+        save_path = os.path.join(dest, group_name+'_station.json')
+    else:
+        save_path = group_name+'_station.json'
+
+    with open(save_path, 'w+') as f:
         json.dump(playlists, f)
 
 
@@ -190,7 +197,7 @@ def get_stations(stationids):
     for stationid, playlist in playlists.items():
         print '-----Station %s' % stationid
         print '\tCompletion: %s' % playlist['complete']
-        print '\tSong Count: %s' % ( playlist['song_count']- playlist['remaining'], )
+        print '\tTotal Songs: %s' % ( playlist['song_count']- playlist['remaining'], )
         print '\tEstimated Remaining: %s' % playlist['remaining']
         print '\tSong Count: %s' % playlist['song_count']
     #add return value summarizing the processed
@@ -204,8 +211,9 @@ def tests():
 def main():
 
     GENRE_FILE = 'backend/genres.json'
+    save_path = 'station_files'
 
-    genre_id = sys.argv[1]
+
 
 #    with open('backend/songza_browse_genres.json') as f:
 #        genres = json.load(f)
@@ -217,33 +225,31 @@ def main():
 #
 
 
-    if genre_id:
+    if len(sys.argv > 1):
 
         if os.path.isfile(GENRE_FILE):
             try:
-                genres = json.load(GENRE_FILE)
+                with open(GENRE_FILE) as f:
+                    genres = json.load(f)
             except IOError as e:
                 print(repr(e))
                 print 'Could not open %s. Need a genres JSON \
                 file to load genre station ids' % GENRE_FILE
                 sys.exit(1)
 
-            stationids = genres[genre_id]['station_ids']
+            stationids = map(str, genres[genre_id]['station_ids'])
 
         else:
             print 'Could not find %s' % GENRE_FILE
 
-    else:
-        print 'No args... exiting'
-        sys.exit(1)
+
+
 
     print 'Attempting to download station: %s' % genre_id
     print '----------------------------------------------'
+
     station = get_stations(stationids)
     print '==========================================\n\nFinished'
-
-
-
 
 
 if __name__ == '__main__':
