@@ -145,7 +145,6 @@ def get_playlists(stationids):
     station_info = defaultdict(int)
     song_list_store = {} #intermediate store of song lists while queue is still running
 
-
     temp_file_dict = {}
 
 
@@ -184,6 +183,15 @@ def get_playlists(stationids):
     with open(stationid+'_playlists.json', 'w+') as f:
         json.dump(playlists, f)
 
+
+    print '==============================='
+    print 'Completed downloading %s stations' % len(playlists)
+    for stationid, playlist in playlists.items():
+        print '-----Station %s' % stationid
+        print '\tCompletion: %s' % playlist['complete']
+        print '\tSong Count: %s' % ( playlist['song_count']- playlist['remaining'], )
+        print '\tEstimated Remaining: %s' % playlist['remaining']
+        print '\tSong Count: %s' % playlist['song_count']
     #add return value summarizing the processed
 
 def tests():
