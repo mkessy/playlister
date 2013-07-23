@@ -2,9 +2,10 @@ import time
 import requests
 import simplejson as json
 import logging
-import pprint
-import pickle
+import os
 import tempfile
+
+import sys
 
 from math import log, ceil
 from Queue import PriorityQueue
@@ -73,7 +74,7 @@ def get_songs(stationid, song_count, song_names):
     SLEEP_TIME = .25
 
     tries = 0
-    song_session = requests.Session()
+    #song_session = requests.Session()
 
     logging.debug('==================================================')
     logging.debug('Starting request loop for station: %s' % stationid)
@@ -135,7 +136,7 @@ def get_songs(stationid, song_count, song_names):
         return ( {'complete':complete, 'remaining':song_count-len(songs),
             'song_names':song_names, 'song_count':song_count, 'stationid':stationid, 'songs':songs}  )
 
-def get_playlists(stationids):
+def get_stations(stationids):
     """Gets the playlists specified in the stationids list, and saves them to file"""
 
     print 'Initializing queue with %s stations' % len(stationids)
@@ -180,7 +181,7 @@ def get_playlists(stationids):
             playlists[stationid] = json.loads(tf.read())
 
     #merge all playlists (stored in temp files) into a single file
-    with open(stationid+'_playlists.json', 'w+') as f:
+    with open(stationid+'_station.json', 'w+') as f:
         json.dump(playlists, f)
 
 
@@ -201,19 +202,50 @@ def tests():
     get_playlists(test_stations)
 
 def main():
-    #generate files for testing
-    test_stations = ['1724409', '1392809', '1391300', '1387704', '1501119']
-    test_station_info = {station:get_station_info(station) for station in test_stations}
 
-    for station in test_stations:
-        print '\n********************************************'
-        print 'Attempting to get songs from station: %s' % station
-        print   '********************************************\n'
-        songs = get_songs(station, test_station_info[station]['song_count'], [])
-        name = 'test3_'+station+'.json'
-        with open(name, 'w+') as f:
-            json.dump({'stationid':station, 'data':songs}, f)
+    GENRE_FILE = 'backend/genres.json'
+
+    genre_id = sys.argv[1]
+
+#    with open('backend/songza_browse_genres.json') as f:
+#        genres = json.load(f)
+#
+#    genre_dict = {genre['id']:genre for genre in genres}
+#
+#    with open('backend/genres.json', 'w+') as f:
+#        json.dump(genre_dict, f)
+#
+
+
+    if genre_id:
+
+        if os.path.isfile(GENRE_FILE):
+            try:
+                genres = json.load(GENRE_FILE)
+            except IOError as e:
+                print(repr(e))
+                print 'Could not open %s. Need a genres JSON \
+                file to load genre station ids' % GENRE_FILE
+                sys.exit(1)
+
+            stationids = genres[genre_id]['station_ids']
+
+        else:
+            print 'Could not find %s' % GENRE_FILE
+
+    else:
+        print 'No args... exiting'
+        sys.exit(1)
+
+    print 'Attempting to download station: %s' % genre_id
+    print '----------------------------------------------'
+    station = get_stations(stationids)
+    print '==========================================\n\nFinished'
+
+
+
+
 
 if __name__ == '__main__':
-    #main()
-    tests()
+    main()
+    #tests()

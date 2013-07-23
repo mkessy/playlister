@@ -1272,3 +1272,123 @@ DEBUG:root:==================================================
 DEBUG:root:Starting request loop for station: 1391300
 INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
 DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409 HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809 HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300 HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704 HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119 HTTP/1.1" 200 None
+DEBUG:root:==================================================
+DEBUG:root:Starting request loop for station: 1724409
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1724409/next HTTP/1.1" 200 None
+DEBUG:root:==================================================
+DEBUG:root:Starting request loop for station: 1501119
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1501119/next HTTP/1.1" 200 None
+DEBUG:root:==================================================
+DEBUG:root:Starting request loop for station: 1387704
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1387704/next HTTP/1.1" 200 None
+DEBUG:root:==================================================
+DEBUG:root:Starting request loop for station: 1392809
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1392809/next HTTP/1.1" 200 None
+DEBUG:root:==================================================
+DEBUG:root:Starting request loop for station: 1391300
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): songza.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /api/1/station/1391300/next HTTP/1.1" 200 None
